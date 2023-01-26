@@ -1,0 +1,38 @@
+# API-запросs
+
+@baseUrl = http://127.0.0.1:8000/api/v1/courses
+
+# получение курса по id
+GET {{baseUrl}}/2/
+Content-Type: application/json
+
+###
+
+# получение списка курсов
+GET {{baseUrl}}/
+Content-Type: application/json
+
+###
+
+# создание нового курса
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+  "name": "Основы моделирования",
+  "students": [1, 2]
+}
+###
+
+# обновление курса
+PATCH {{baseUrl}}/3/
+Content-Type: application/json
+
+{
+  "name": "Основы мат.анализа"
+}
+###
+
+# удаление курса
+DELETE {{baseUrl}}/3/
+Content-Type: application/json
