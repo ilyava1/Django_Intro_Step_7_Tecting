@@ -8,6 +8,12 @@ Content-Type: application/json
 
 ###
 
+# получение курса по фильтру по id
+GET {{baseUrl}}/?id=2
+Content-Type: application/json
+
+###
+
 # получение списка курсов
 GET {{baseUrl}}/
 Content-Type: application/json
@@ -19,20 +25,23 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-  "name": "Основы моделирования",
-  "students": [1, 2]
+  "name": "Основы алгебры",
+  "students": [
+    1,
+    2
+    ]
 }
 ###
 
 # обновление курса
-PATCH {{baseUrl}}/3/
+PATCH {{baseUrl}}/4/
 Content-Type: application/json
 
 {
-  "name": "Основы мат.анализа"
+  "name": "Основы мат.анализа-2"
 }
 ###
 
 # удаление курса
-DELETE {{baseUrl}}/3/
+DELETE {{baseUrl}}/4/
 Content-Type: application/json
